@@ -1,0 +1,206 @@
+html {
+    font-family: Inter;
+}
+
+.mdc-top-app-bar {
+    background-color:#8EBAE5!important;
+}
+
+/* Login  screen */
+.home-guest-wrapper {
+    display: flex;
+    width: 100%;
+    padding: 28px 0px 119px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 86.873px;
+}
+
+.home-guest-header {
+    width: 100%;
+    height: 96.13px;
+    left: 0px;
+    top: 28px;
+    position: absolute
+}
+
+.home-guest-title {
+    width: 633px;
+    height: 61px;
+    left: 28px;
+    top: 0px;
+    position: absolute;
+    color: #00599F;
+    font-size: 48px;
+    font-family: Inter;
+    font-weight: 400;
+    word-wrap: break-word
+}
+
+.home-top-line {
+    width: 100%;
+    height: 0px;
+    left: 0px;
+    top: 93px;
+    position: absolute;
+    border: 1px #BDCD00 solid
+}
+
+.sign-in-line {
+    width: 100%;
+    height: 0px;
+    left: 0px;
+    top: 130px;
+    position: relative;
+    border: 1px #BDCD00 solid
+}
+
+.login-form-section {
+    width: 484px;
+    height: 750px;
+    top: 20%;
+    position: absolute
+}
+
+.login-form {
+    width: 484px;
+    height: 700px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: rgba(142, 186, 229, 0.06)
+}
+
+.login-form-title {
+    width: 145px;
+    height: 65px;
+    left: 170px;
+    top: 47px;
+    position: absolute;
+    color: #00599F;
+    font-size: 40px;
+    font-family: Inter;
+    font-weight: 400;
+    word-wrap: break-word
+}
+
+#login-form-username {
+    width: 70%;
+    height: 56px;
+    left: 82px;
+    top: 273px;
+    position: absolute;
+    background: rgba(199, 221, 242, 0.21);
+    border-radius: 4px;
+    border: 1px #C7DDF2 solid;
+    backdrop-filter: blur(4px);
+    color: #3c3e42;
+    font-size: 24px;
+    font-family: Inter;
+    word-wrap: break-word;
+    padding: 10px;
+}
+
+.form-input::placeholder {
+    color: #BFBFBF;
+    font-size: 22px;
+    font-family: Inter;
+    word-wrap: break-word;
+    padding: 10px;
+}
+
+.form-input:focus, .form-input:focus-visible {
+    background-color: #C7DDF2 !important;
+    border-radius: 3px !important;
+    /*border: 1px #BDCD00 solid !important;*/
+    outline: 1px solid #BDCD00!important;
+}
+
+#login-form-password {
+    width: 70%;
+    height: 56px;
+    left: 82px;
+    top: 366px;
+    position: relative;
+    background: rgba(199, 221, 242, 0.21);
+    border-radius: 4px;
+    border: 1px #C7DDF2 solid;
+    backdrop-filter: blur(4px);
+    color: #3c3e42;
+    font-size: 24px;
+    font-family: Inter;
+    word-wrap: break-word;
+    padding: 10px;
+}
+
+/*#login-form-password::placeholder {*/
+/*    color: #BFBFBF;*/
+/*    font-size: 24px;*/
+/*    font-family: Inter;*/
+/*    word-wrap: break-word;*/
+/*}*/
+
+/*#login-form-password:focus, #login-form-password:focus-visible {*/
+/*    background-color: #C7DDF2 !important;*/
+/*    border-radius: 3px !important;*/
+/*    border: 1px #BDCD00 solid !important;*/
+/*}*/
+
+.login-form-button {
+    width: 150px;
+    height: 57px;
+    left: 265px;
+    top: 504px;
+    position: absolute
+}
+
+.sign-in-button-text {
+    left: 31px;
+    top: 10px;
+    bottom: 10px;
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    font-family: Inter;
+    font-weight: 400;
+    word-wrap: break-word
+}
+
+.sign-in {
+    width: 150px;
+    height: 57px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #BDCD00;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    border: 1px #C7DDF2 solid
+}
+
+.sign-in:active {
+    backdrop-filter: blur(4px);
+    background: white;
+    border: 1px #BDCD00 solid
+}
+
+.sign-in:active span{
+    color: #BDCD00;
+}
+
+#experiments-drawer {
+    visibility: hidden;
+    padding: 10000px;
+}
+.forgot-password {
+    right: 67px;
+    top: 589px;
+    position: absolute;
+    color: #BFBFBF;
+    font-size: 24px;
+    font-family: Inter;
+    font-weight: 400;
+    word-wrap: break-word
+}
+
+/* End of login screen */

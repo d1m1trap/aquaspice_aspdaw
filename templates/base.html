@@ -1,0 +1,80 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-lime.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="/static/css/dim.css">
+    <script src="/static/js/dim.js"></script>
+    {% block extra_js %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title" id="session-dependant-header">{% if session_data and session_data.pilot %}{{
+                    session_data.pilot|upper
+                }}{% endif %}{% if session_data and session_data.process %} - {{ session_data.process }}{% endif %}
+            {% if session_data and session_data.asset %} - {{ session_data.asset }}{% endif %}</span>
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+                <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
+                    <i class="material-icons icon-2x">logout</i>
+                </label>
+            </div>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <img class="sidemenu-logo" src="/static/img/rwth_aquaspice_rgb.png">
+        <span class="vertical-title">Data Analytics Workbench</span>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+            <input type="text" value="{% if session_data and session_data.process %}{{session_data.process}}{% endif %}"
+                   class="mdl-textfield__input" id="process_input" readonly>
+            <input type="hidden" value="" name="process_input">
+            <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+            <label for="process_input" class="mdl-textfield__label">Process</label>
+            <ul for="process_input" class="mdl-menu mdl-menu--bottom-left mdl-js-menu" id="process-dropdown">
+            </ul>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select disabled">
+            <input type="text" value="{% if session_data and session_data.asset %}{{session_data.asset}}{% endif %}"
+                   class="mdl-textfield__input" id="asset_input" readonly>
+            <input type="hidden" value="" name="asset_input">
+            <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+            <label for="asset_input" class="mdl-textfield__label">Asset</label>
+            <ul for="asset_input" class="mdl-menu mdl-menu--bottom-left mdl-js-menu" id="asset-dropdown">
+            </ul>
+        </div>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link {% if active_page == 'home' or not active_page %}active{% endif %}"
+               href="/daw/home">Home</a>
+            <a class="mdl-navigation__link {% if active_page == 'data' %}active{% endif %}" href="/daw/data">Data</a>
+            <a class="mdl-navigation__link {% if active_page == 'experiments' %}active{% endif %}"
+               href="/daw/experiments">Experiments</a>
+            <a class="mdl-navigation__link {% if active_page == 'models' %}active{% endif %}"
+               href="/daw/models">Models</a>
+            <a class="mdl-navigation__link {% if active_page == 'algorithms' %}active{% endif %}"
+               href="/daw/algorithms">Algorithms</a>
+            <a class="mdl-navigation__link {% if active_page == 'monitoring' %}active{% endif %}"
+               href="/daw/monitoring">Monitoring</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page page-content">
+            <div class="mdl-grid">
+                <div id="app"></div>
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </main>
+</div>
+
+</body>
+</html>

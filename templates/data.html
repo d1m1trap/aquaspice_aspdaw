@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}{{active_page}}{% endblock %}
+
+{% block content %}
+<form id="experiment_data">
+    <div class="mdl-grid form">
+        <div class="mdl-cell mdl-cell--12-col">
+            <div class="breadcrumb">{{ active_page }}</div>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col">
+            {% if session_data and session_data.process and session_data.asset %}
+            <span class="section-text">Select date range to continue. Available dates are from {} to today. Data limit is xMB or yRows.</span>
+            {% else %}
+            <span class="section-text">Select process and asset from the side menu.</span>
+            {% endif %}
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col graybox">
+            <label>Start Date:</label>
+            <input class="datepicker" type="text" id="date_from" placeholder="Select dates" name="date_from"/>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col graybox">
+            <label>End Date:</label>
+            <input class="datepicker" type="text" id="date_to" placeholder="Select dates" name="date_to"/>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col graybox">
+        </div>
+
+        <div class="mdl-cell mdl-cell--12-col">
+            <label class="mdl-checkbox mdl-js-checkbox" for="experiments">
+                <input type="checkbox" id="experiments" class="mdl-checkbox__input" checked name="experiments"
+                       value="True">
+                <span class="mdl-checkbox__label">Use data in experiments</span>
+            </label>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col">
+            <button type="submit" id="data_btn"
+                    class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect">Ok
+            </button>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col graybox"><span class="section-title">Data Preview</span>
+            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="data_preview_table">
+            </table>
+        </div>
+    </div>
+</form>
+<form id="download_data">
+        <div class="mdl-cell mdl-cell--12-col">
+            <button type="submit" id="download_data_btn"
+                    class="disabled mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect">Download
+            </button>
+
+    </div>
+</form>
+{% endblock %}
+{% block extra_js %}
+<script src="/static/js/data.js"></script>
+{% endblock %}

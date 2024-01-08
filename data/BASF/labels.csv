@@ -1,0 +1,38 @@
+Units,Description,Tag
+%,Humidity,C3W_AI_0040
+C,Inlet air temp,C3W_AI_0045
+C,Inlet liquid temp,C3W_AI_0053
+M3/HR,Outlet/inlet liquid flow rate,C3W_AI_0063
+C,Outlet liquid temp,C3W_AI_0153
+T/HR blowdown,blowdown,C3S_AC_2149
+M3/HR,Makeup water flow,C3W_AI_0130
+kW,B3201A Vermogen ventilator motor,C3W_AI_0001
+AO%,B3201A Toerental regelaar ventilator,C3W_AOT_0001
+kW,B3201B Vermogen ventilator motor,C3W_AI_0101
+AO%,B3201B Toerental regelaar ventilator,C3W_AOT_0101
+kW,B3201C Vermogen ventilator motor,C3W_AI_0011
+AO%,B3201C Toerental regelaar ventilator,C3W_AOT_0011
+kW,B3201D Vermogen ventilator motor,C3W_AI_0111
+AO%,B3201D Toerental regelaar ventilator,C3W_AOT_0111
+kW,B3201E Vermogen ventilator motor,C3W_AI_0021
+AO%,B3201E Toerental regelaar ventilator,C3W_AOT_0021
+kW,B3201F Vermogen ventilator motor,C3W_AI_0121
+kW,B3201G Vermogen ventilator motor,C3W_AI_0031
+kW,B3201H Vermogen ventilator motor,C3W_AI_0131
+kW,B3201I Vermogen ventilator motor,C3W_AI_0041
+kW,B3201J Vermogen ventilator motor,C3W_AI_0141
+kW,B3201K Vermogen ventilator motor,C3W_AI_0051
+AO%,B3201K Toerental regelaar ventilator,C3W_AOT_0002
+kW,B3201L Vermogen ventilator motor,C3W_AI_0151
+AO%,B3201L Toerental regelaar ventilator,C3W_AOT_0121
+kW,B3201M Vermogen ventilator motor,C3W_AI_0061
+AO%,B3201M Toerental regelaar ventilator,C3W_AOT_0012
+kW,B3201N Vermogen ventilator motor,C3W_AI_0161
+AO%,B3201N Toerental regelaar ventilator,C3W_AOT_0102
+kW,B3201O Vermogen ventilator motor,C3W_AI_0071
+AO%,B3201O Toerental regelaar ventilator,C3W_AOT_0022
+kW,B3201P Vermogen ventilator motor,C3W_AI_0171
+kW,B3201Q Vermogen ventilator motor,C3W_AI_0081
+kW,B3201R Vermogen ventilator motor,C3W_AI_0181
+kW,B3201S Vermogen ventilator motor,C3W_AI_0091
+kW,B3201T Vermogen ventilator motor,C3W_AI_0191

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}{{active_page}}{% endblock %}
+
+{% block content %}
+
+<div class="mdl-cell mdl-cell--12-col">
+    <div class="breadcrumb">{{ active_page }}</div>
+</div>
+<div class="home">
+    <div class="mdl-grid form">
+        <div class="mdl-cell mdl-cell--12-col">
+            <h2 class="home mdl-card__title-text">Welcome to AquaSPICE - Data Analytics Workbench!</h2>
+            <br/>
+            <div class="section-text">
+                A powerful tool for data analytics and research insights. These guidelines will help you make the most
+                of the
+                workbench.
+            </div>
+            <span class="section-title"><br/><br/>Getting Started<br/></span>
+            <span class="section-text">Select a process and an asset to get started.<br/>Begin your research journey by familiarizing yourself with the platform's interface and capabilities.<br/></span>
+            <span class="section-text"><br/></span>
+            <span class="section-title">Data Selection<br/></span>
+            <span class="section-text">Explore the available data of the processes and the assets. Select data to perform experiments.<br/></span>
+            <span class="section-text"><br/></span>
+            <span class="section-title">Experimentation Hub<br/></span>
+            <span class="section-text">Leverage the Experiments hub to design, execute, and document your research experiments.<br/></span>
+            <span class="section-text"><br/></span>
+            <span class="section-title">Model Hub<br/></span>
+            <span class="section-text">Utilize the model training environment to develop, analyze and compare machine learning models.<br/>Safely store and version your research models in the Model Registry for reproducibility and reference.<br/>Deploy models for consumption by the Data Analytics service<br/></span>
+            <span class="section-text"><br/></span>
+            <span class="section-title">Pipelines<br/></span>
+            <span class="section-text">Create and automate data processing and machine learning pipelines to streamline your research and analysis workflows.<br/>Schedule pipeline runs<br/></span>
+            <span class="section-text"><br/></span>
+            <span class="section-title">Monitoring<br/></span>
+            <span class="section-text">Keep an eye on your research experiments and data processes in real-time to track progress and performance.<br/>Configure custom alerts to be notified of critical events or anomalies in your research, ensuring timely responses.<br/></span>
+        </div>
+    </div>
+</div>
+{% endblock %}

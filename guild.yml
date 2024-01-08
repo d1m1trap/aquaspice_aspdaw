@@ -1,0 +1,50 @@
+preprocess:
+  description: Pre-process data for machine learning tasks
+  main: preprocess
+  visible: false
+  sourcecode:
+    - exclude: data
+  flags:
+    variable: all
+    
+anomaly_detection:
+  description: Anomaly detection stage with Isolation Forest
+  main: anomalies
+  visible: false
+  sourcecode:
+    - exclude: data
+  flags:
+    variable: all
+    contamination: 0.05
+    max_samples: 37
+    max_features: 37
+  output-scalars: '^(\key): (\value)'
+
+multivariate:
+  sourcecode:
+    - exclude: data
+  description: Runs multivariate anomaly detection pipeline end-to-end
+  visible: true
+  flags:
+    variable: all
+    contamination: 0.05
+    max_samples: auto
+    max_features: 37
+  output-scalars: '^(\key): (\value)'
+  steps:
+    - preprocess variable=${variable}
+    - anomaly_detection contamination=${contamination} max_samples=${max_samples} max_features=${max_features} variable=${variable}
+
+univariate:
+  sourcecode:
+    - exclude: data
+  description: Runs uni-variate anomaly detection pipeline end-to-end
+  visible: true
+  flags:
+    variable: Humidity
+    contamination: 0.05
+  output-scalars: '^(\key): (\value)'
+  steps:
+    - preprocess variable=${variable}
+    - anomaly_detection contamination=${contamination} variable=${variable}
+

@@ -1,0 +1,20 @@
+credentials:
+  usernames:
+    aquaspice:
+      email: elfdim19@gmail.com
+      name: AquaSPICE user
+      password: $2b$12$vXA1l9OGGlsKuj0DuAaPXeWf0VGLISdRj/xndbVys5tVaePVhi9T2 # To be replaced with hashed password
+cookie:
+  expiry_days: 30
+  key: random_signature_key
+  name: random_cookie_name
+preauthorized:
+  emails:
+  - dimitra.pournara@neurons.tech
+theme:
+  primaryColor: "#F63366"
+  backgroundColor: "#f5f8fa"
+  secondaryBackgroundColor: "#F0F2F6"
+  textColor: "#262730"
+  font: "monospace"
+  layout: "wide"
