@@ -1,6 +1,0 @@
-[theme]
-base="light"
-primaryColor="#145a9d"
-backgroundColor="#f5f8fa"
-layout="wide"
-override_plotly_theme=false

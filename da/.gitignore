@@ -1,7 +1,0 @@
-.venv/
-app/data
-.idea
-.env
-
-/DockerfileLocal
-/data
