@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+  package:
+    container_name: daw-service
+    build: .
+    restart: unless-stopped
+    command: sh -c "alembic upgrade head &&
+             uvicorn main:app --host 0.0.0.0 --port 80"
+    ports:
+      - 80:80
+    depends_on:
+      - postgres
+    env_file: ./.env
+    environment:
+      - D_ENV=development
+    networks:
+      - daw_net
+  postgres:
+    container_name: postgresdb_daw
+    restart: unless-stopped
+    image: postgres
+    ports:
+      - 5432:5432
+    env_file: ./.env
+    volumes:
+      - ./data/psql/data:/var/lib/postgres
+      - ./db/init-db.sql:/docker-entrypoint-initdb.d/data.sql
+    networks:
+      - daw_net
+networks:
+  daw_net:
+    driver: bridge
