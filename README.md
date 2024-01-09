@@ -25,7 +25,6 @@ It allows for dataset selection, experiment tracking and model deployment. The a
 * [![Vue.js][Vue.js]][Vue.js-url]
 * [![Material][Material]][Material-url]
 * [![Docker][Docker]][Docker-url]
-* [![Kubernetes][Kubernetes]][Kubernetes-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
